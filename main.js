@@ -4,6 +4,7 @@ const path = require('path')
 
 let win
 
+
 function createWindow() {
    win = new BrowserWindow({width: 800, height: 600})
    win.loadURL(url.format ({
@@ -12,12 +13,5 @@ function createWindow() {
       slashes: true
    }))
 }
-
-
-$('#search').on('click', () => {
-    console.log("Clicked");
-    var input_value = document.getElementById('data').value;
-    win.getElementById('display').innerHTML = input_value;
-}) 
 
 app.on('ready', createWindow)

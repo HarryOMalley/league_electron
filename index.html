@@ -1,68 +1,110 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>League of Legends Analysis Prototype</title>
+    <link rel="stylesheet"
+          href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
 
-  <title>League of Legends Data Thingy</title>
+    <style type="text/css">
+        #software-list 
+        {
+            height: auto;
+            overflow-y: auto;
+        }
+        #main
+        {
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom : 3px;
+        }
+        #header1
+        {
+            padding: 50px;
+        }
+        #header2
+        {
+            width:100%;
+            font-size: 3em;
+        }
+        #logo-image {
+            margin: auto;
+            height:auto;
+            width:250px;
+            text-align: center;
+        }
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./styles.css">
+        /* Create two equal columns that floats next to each other */
+        .column1 {
+            float: left;
+            width: 30%;
+            padding: auto;
+            height: 50%; /* Should be removed. Only for demonstration */
+        }
+        .column2 {
+            float: left;
+            width: 68%;
+            margin-left:10px;
+            padding: auto;
+            height: 500px;
+        }
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-  <script src="./functions.js" charset="utf-8"></script>
+        td
+        {
+            width: auto;
+            padding:0 30px 0 30px;
+        }
+        th
+        {
+            width: auto;
+            padding:0 30px 0 30px;
+            font-size:1em;
+        }
 
+
+    </style>
 </head>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" display: "inline-block">
+    <img src="./icons/league.png" id="logo-image"/>
+</nav>
+
+
 <body>
-  <div id="container" class="container-fluid">
-
-    <!-- Input row -->
-    <input id="data" size="30">
-
-    <p>Select your Region:</p>
-
-    <div>
-      <input type="radio" id="euw" name="region" value="euw"
-             checked>
-      <label for="euw">EU West</label>
-    </div>
-    
-    <div>
-      <input type="radio" id="eue" name="region" value="eue">
-      <label for="eue">EU East</label>
-    </div>
-    
-    <div>
-      <input type="radio" id="na" name="region" value="na">
-      <label for="na">North America</label>
-    </div>
-
-
-    <button id="btn">Search</button>
-
-    <div id="display"></div>
-    
-    <script src="functions.js"></script>
-    
-    <!-- Search button -->
-    <button type="button" class="btn btn-success" id="search">Search</button>
-
-    <!-- Output box -->
-    <div class="row silver">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <h1 class="silver">Output</h1>
-          <h2>
-              <span id="silver-price" class="price"></span>
-              <small id="silver-change" class="change"></small>
-            </h2>
+  <h1 id="header1">Analysis of Account</h1>
+  <form id="main">
+    <fieldset>
+        <legend>Username</legend>
+        <div class="form-group">
+            <input type="email" class="form-control" id="inputUsername" placeholder="Enter Username">
         </div>
-      </div>
 
+    </fieldset>
 
-  </div>
+    <fieldset class="form-group">
+        <legend>Choose Region</legend>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            EU West
+          </label>
+        </div>
+        <div class="form-check">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+            EU East
+          </label>
+        </div>
+        <div class="form-check disabled">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+            North America
+          </label>
+        </div>
+      </fieldset>
+      <button type="button" class="btn btn-success">Analyse Account</button>
+  </form>
 </body>
-
 </html>
+
+
