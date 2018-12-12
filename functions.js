@@ -6,8 +6,7 @@ process.env.LEAGUE_API_PLATFORM_ID = 'euw1'
 const LeagueJs = require('./node_modules/leaguejs/lib/LeagueJS.js');
 const leagueJs = new LeagueJs(process.env.LEAGUE_API_KEY);
 
-leagueJs.Summoner
-	.gettingByName('EldoranDev')
+leagueJs.Match.gettingTimelineById(3862545589)
 	.then(data => {
 		'use strict';
 		console.log(data);
@@ -16,7 +15,7 @@ leagueJs.Summoner
 		'use strict';
 		console.log(err);
 	});
-leagueJs.Match.gettingById(3861248997)
+leagueJs.Match.gettingById(3862545589)
     .then(data => {
         'use strict';
         console.log(data);
