@@ -1,0 +1,27 @@
+{
+  "name": "league_electron",
+  "version": "1.0.0",
+  "description": "Electron app to analyse League of Legends data",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^3.0.11",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "leaguejs": "^1.10.1"
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarryOMalley/league_electron.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarryOMalley/league_electron/issues"
+  },
+  "homepage": "https://github.com/HarryOMalley/league_electron#readme"
+}
