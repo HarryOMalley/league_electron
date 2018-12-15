@@ -8,6 +8,9 @@
     "jquery": "^3.3.1"
   },
   "devDependencies": {
+    "chart.js": "^2.7.3",
+    "chartjs": "^0.3.24",
+    "electron-chartjs": "^1.0.0",
     "leaguejs": "^1.10.1"
   },
   "scripts": {
